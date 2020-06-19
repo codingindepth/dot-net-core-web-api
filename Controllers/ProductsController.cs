@@ -62,6 +62,7 @@ namespace ProductCSAPI.Controllers
         public  ActionResult<List<Products>>  DeleteProduct(int id)
         {
             var index =_products.FindIndex(x=>x.prodID==id);
+            if(index==0 || index>0)
            _products.RemoveAt(index);
            //_logger.LogInformation(21,"Deleting Id {id} and index {index}",_products);
            return _products;
