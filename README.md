@@ -21,3 +21,10 @@ dotnet run
 
 Visual Code
 
+# Dockerize .NET Core API 
+
+docker build -t productapp .   
+
+docker run -d -p 8080:80 --name prod  productapp
+
+docker ps -a  
